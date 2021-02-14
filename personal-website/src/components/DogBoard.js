@@ -76,7 +76,7 @@ class DogBoard extends Component {
 
                 <p>Enter Image URL:</p>
                 <input type='text' value={this.state.dogURL} onChange={this.newDogImageFunction} />
-                <button onclick={this.saveDogInfo}>Save</button>
+                <button onClick={this.saveDogInfo}>Save</button>
 
             </div>
         );
