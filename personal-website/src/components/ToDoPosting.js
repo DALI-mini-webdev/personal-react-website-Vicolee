@@ -9,11 +9,16 @@ class ToDoPost extends Component {
         }
     }
 
+    deletePost = () => {
+
+    }
+
     render() {
         return (
             <div className='todoPostStyle'>
                 <p>{this.props.title}</p>
                 <p>{this.props.task}</p>
+                <button onClick={this.deletePost}>Delete!</button>
             </div>
         )
     }
