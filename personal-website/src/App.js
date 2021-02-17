@@ -9,6 +9,9 @@ import { Component } from 'react';
 // import space from './images/space.jpg';
 import DogBoard from "./components/DogBoard";
 import axios from 'axios';
+import firebase from './firebase/index';
+import ToDoBoard from './components/ToDoBoard';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -127,12 +130,15 @@ class App extends Component {
   }
 
   render() {
+    console.log(firebase);
+    console.log(firebase.db);
     return (
       <div>
         {this.mainPage()}
         <div> API Testing </div>
         <button onClick = {this.fetchData}>click for beer </button>
         {this.renderData()}
+        <ToDoBoard />
       </div>
     );
   }
